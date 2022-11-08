@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to left, rgb(200, 162, 200), rgb(184, 38, 207));
+        }
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px; 
+            border-radius: 15px;
+            width: 20%;
+        }
+        fieldset{
+           border: 3px solid mediumorchid;
+        }
+        legend {
+            border: 1px solid mediumorchid;
+            padding: 8px;
+            text-align: center;
+            background-color: mediumorchid;
+            border-radius: 5px;
+            
+        }
+
+        .inputbox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+        .labelInput1{
+            position: absolute;
+            bottom: 281px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .labelInput2{
+            position: absolute;
+            bottom: 245px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .labelInput3{
+            position: absolute;
+            bottom: 209px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput1,
+        .inputUser:valid ~ .labelInput1{
+            bottom: 300px;
+            font-size: 12px;
+            color: mediumorchid;           
+        }
+        .inputUser:focus ~ .labelInput2,
+        .inputUser:valid ~ .labelInput2{
+            bottom: 265px;
+            font-size: 12px;
+            color: mediumorchid;
+        }
+        .inputUser:focus ~ .labelInput3,
+        .inputUser:valid ~ .labelInput3{
+            bottom: 228px;
+            font-size: 12px;
+            color: mediumorchid;
+        }
+        /* descobrir o pq não cosegui aumentar o padding da barra enviar*/
+        #submit{
+            background-image: linear-gradient(to right, rgb(200, 162, 200), rgb(184, 38, 207));
+            width: 100%;
+            border: none;
+            padding: 0%;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        #submit:hover{
+            background-image: linear-gradient(to right, rgb(163, 104, 163), rgb(150, 31, 168));
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <Legend><b>Formulário</b></Legend>
+                <!-- descobrir o pq não deu para juntar os 3 labelInput em apenas 1 -->
+                <div class="inputBox">
+                    <p>
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput1"><b>Nome e Sobrenome</b> </label>
+                </p>
+                </div>
+                <div class="inputBox">
+                <p>
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput2"><b>Email</b> </label>
+                </p>
+                </div>
+                <div class="inputBox">
+                    <p>
+                    <input type="tel" name="Telefone" id="Telefone" class="inputUser" required>
+                    <label for="Telefone" class="labelInput3"><b>Telefone (com DDD)</b></label>
+                </p>
+                </div>
+                <div>
+                    <p>
+                     <b>Em qual estado você mora?</b>
+        <p></p>
+                     <select name="select">
+                     <option value="Selecione">Selecione</option>
+                     <option value="Acre (AC)">Acre (AC)</option>
+                     <option value="Alagoas (AL)">Alagoas (AL)</option>
+                     <option value="Amapá (AP)">Amapá (AP)</option>
+                     <option value="Amazonas (AM)">Amazonas (AM)</option>
+                     <option value="Bahia (BA)">Bahia (BA)</option>
+                     <option value="Ceará (CE)">Ceará (CE)</option>
+                     <option value="Distrito Federal (DF)">Distrito Federal (DF)</option>
+                     <option value="Espírito Santo (ES)">Espírito Santo (ES)</option>
+                     <option value="Goiás (GO)">Goiás (GO)</option>
+                     <option value="Maranhão (MA)">Maranhão (MA)</option>
+                     <option value="Mato Grosso (MT)">Mato Grosso (MT)</option>
+                     <option value="Mato Grosso do Sul (MS)">Mato Grosso do Sul (MS)</option>
+                     <option value="Minas Gerais (MG)">Minas Gerais (MG)</option>
+                     <option value="Pará (PA)">Pará (PA)</option>
+                     <option value="Paraíba (PB)">Paraíba (PB)</option>
+                     <option value="Paraná (PR)">Paraná (PR)</option>
+                     <option value="Pernambuco (PE)">Pernambuco (PE)</option>
+                     <option value="Piauí (PI)">Piauí (PI)</option>
+                     <option value="Rio de Janeiro (RJ)">Rio de Janeiro (RJ)</option>
+                     <option value="Rio Grande do Norte (RN)">Rio Grande do Norte (RN)</option>
+                     <option value="Rio Grande do Sul (RS)">Rio Grande do Sul (RS)</option>
+                     <option value="Rondônia (RO)">Rondônia (RO)</option>
+                     <option value="Roraima (RR)">Roraima (RR)</option>
+                     <option value="Santa Catarina (SC)">Santa Catarina (SC)</option>
+                     <option value="São Paulo (SP)">São Paulo (SP)</option>
+                     <option value="Sergipe (SE)">Sergipe (SE)</option>
+                     <option value="Tocantins (TO)">Tocantins (TO)</option>
+                     <option value="Fugi do Brasil">Fugi do Brasil(FB)</option>
+                    </select>
+                </p>
+                </div>
+                <div class="inputbox">
+                    <p>
+                        <label for="date"><b>Data de nascimento:</b></label>
+                        <p></p>
+                        <input type="date" name="date" id="date" class="inputUser" required>
+                       
+                    </p>
+                    
+                    
+                </div>
+                <input type="submit" name="submit" id="submit">
+            
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
